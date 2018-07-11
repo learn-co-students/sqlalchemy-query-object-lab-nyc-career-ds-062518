@@ -21,14 +21,16 @@ class TestQueries(unittest.TestCase):
                 result_arr.append(company.company)
             return result_arr
 
-        result = ['Apple', 'American Express', 'Boeing', 'Caterpillar', 'Cisco Systems', 'Chevron', 'Walt Disney', 'DowDuPont', 'General Electric', 'Goldman Sachs', 'The Home Depot', 'IBM', 'Intel', 'Johnson & Johnson', 'JPMorgan Chase', 'Coca-Cola', "McDonald's", '3M', 'Merck', 'Microsoft', 'Nike', 'Pfizer', 'Procter & Gamble', 'Travelers', 'UnitedHealth Group', 'United Technologies', 'Visa', 'Verizon', 'Walmart', 'ExxonMobil']
+        result = ['Apple', 'American Express', 'Boeing', 'Caterpillar', 'Cisco Systems', 'Chevron', 'Walt Disney', 'DowDuPont', 'General Electric', 'Goldman Sachs', 'The Home Depot', 'IBM', 'Intel', 'Johnson & Johnson', 'JPMorgan Chase', 'Coca-Cola', "McDonald's", '3M', 'Merck',
+                'Microsoft', 'Nike', 'Pfizer', 'Procter & Gamble', 'Travelers', 'UnitedHealth Group', 'United Technologies', 'Visa', 'Verizon', 'Walmart', 'ExxonMobil']
 
         self.assertEqual(format(), result)
 
     def test_return_list_of_dicts_of_tech_company_names_and_their_EVs_ordered_by_EV_descending(self):
         tech = return_list_of_dicts_of_tech_company_names_and_their_EVs_ordered_by_EV_descending()
 
-        result = [{'company': 'Apple', 'EV': 954.8}, {'company': 'Microsoft', 'EV': 708.61}, {'company': 'Intel', 'EV': 244.6}, {'company': 'IBM', 'EV': 178.63}, {'company': 'Cisco Systems', 'EV': 174.31}]
+        result = [{'company': 'Apple', 'EV': 954.8}, {'company': 'Microsoft', 'EV': 708.61}, {'company': 'Intel', 'EV': 244.6}, {'company': 'IBM', 'EV': 178.63},
+                    {'company': 'Cisco Systems', 'EV': 174.31}]
         self.assertEqual(tech, result)
 
     def test_return_list_of_consumer_products_companies_with_EV_above_225(self):
